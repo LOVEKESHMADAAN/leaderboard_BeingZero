@@ -1,0 +1,46 @@
+   <div  style="background-color: #fff; margin-top:25px;margin-left: 400px  ">
+       <div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 2900px;">
+<table class="table table-striped" style="max-width: 2900px">
+   <h3 style="align-items:center ;margin-left: 145px;margin-top: 10px">LEADERBOARD</h3>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br>
+      <table class="table table-bordered table-striped " style="width:500px;align-content:center;">
+     
+
+      
+    <thead style=" ">
+        <tr>
+            <th> RANK   </th>
+            <th> NAME   </th>
+            <th> RATING </th>
+          
+          
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data as |item i|  }}
+     
+        
+        <tr> 
+         <ul>    
+            <td> {{add i}}</td>
+            <td> {{this.mentorpicusernamefinal}}</td>
+            <td> {{this.ratingfinal}}</td>
+           
+           
+        </ul>   
+        </tr>
+        
+        {{/each}}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</table>
+</article>
+</div>
+</div>

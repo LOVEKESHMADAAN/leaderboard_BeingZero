@@ -1,0 +1,50 @@
+<div  style="background-color: #fff; margin-top:25px;margin-left: 400px  ">
+       <div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 2900px;">
+<h3>{{viewTitle}}</h3>
+<br>
+<form action="/update" method="POST" >
+   <h3 style="align-items:center ;margin-left: 2px">Update Your Details!!</h3>
+     <br>
+      <div class="form-group ">
+            <label>BATCH</label>
+            <input type="number" class="form-control" name="batch" value="{{user.batch}}"  >
+      </div>
+    <div class="form-row">
+    <div class="form-group col-md-6 ">
+        <label>MENTORPIC USERNAME</label>
+        <input type="text" class="form-control" name="mp" placeholder="mentorpic username should be same "  value="{{user.mentorpicusername}}" >
+    </div>
+    <div class="form-group col-md-6 ">
+        <label>GEEKSFORGEEKS USERNAME</label>
+        <input type="text" class="form-control" name="gfg" placeholder="" value="{{user.gfgusername}}" >
+    </div>
+    </div> 
+    <div class="form-row">
+    <div class="form-group col-md-6 ">
+            <label>CODECHEF USERNAME</label>
+            <input type="text" class="form-control" name="cc" placeholder="" value="{{user.ccusername}}" >
+    </div>  
+        <div class="form-group col-md-6  ">
+            <label>CODEFORCES USERNAME</label>
+            <input type="text" class="form-control" name="cf"  value="{{user.cfusername}}" >
+        </div>
+       </div> 
+        <div class="form-row">
+        <div class="form-group  col-md-6">
+            <label>SPOJ USERNAME</label>
+            <input type="text" class="form-control" name="spoj"  value="{{user.spojusername}}" >
+        </div>
+        <div class="form-group col-md-6 ">
+            <label>INTERVIEWBIT USERNAME</label>
+            <input type="text" class="form-control" name="ib"  value="{{user.ibusername}}" >
+        </div>
+        </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>UPDATE</button>
+         
+    </div>
+</form>
+</article>
+</div>
+</div>

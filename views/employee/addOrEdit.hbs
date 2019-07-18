@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="container">
+<body class="bg-info">
+    <div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 2900px;">
+     
+         
+<div class="container">
+<h3>{{viewTitle}}</h3>
+
+<form action="/admin" method="POST" autocomplete="off" style="">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Platform Name</label>
+        <div class="input-group-prepend">
+        <input type="text" class="form-control" name="platform" placeholder="platform" value="{{employee.platform}}">
+    </div>
+    </div>
+     <div class="form-row">
+    <div class="form-group col-md-6">
+        <label>URL FRONT</label>
+        <input type="text" class="form-control" name="url_front" placeholder="url" value="{{employee.url_front}}">
+    </div>
+     <div class="form-group col-md-6">
+        <label>URL BACK</label>
+        <input type="text" class="form-control" name="url_back" placeholder="url" value="{{employee.url_back}}">
+    </div>
+    </div>
+    <div class="form-group">
+        <label>DIVISION_ID </label>
+        <input type="text" class="form-control" name="division_id" placeholder="division_id" value="{{employee.division_id}}">
+    </div> 
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label>Slice From Start</label>
+        <input type="number" class="form-control" name="slice_from_start" placeholder="slice from" value="{{employee.slice_from_start}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Slice From Back</label>
+        <input type="number" class="form-control" name="slice_from_back" placeholder="slice to" value="{{employee.slice_from_back}}"></div>
+    </div>
+      <div class="form-group">
+        <label>AGENT </label>
+        <input type="text" class="form-control" name="agent" placeholder="agent" value="{{employee.agent}}">
+    </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+        <label>WAITAGE</label>
+        <input type="number" class="form-control" name="waitage" placeholder="waitage" value="{{employee.waitage}}">
+      </div>
+        <div class="form-group col-md-6">
+        <label>Multiplier</label>
+        <input type="number" class="form-control" name="multiplier" placeholder="multiplier" value="{{employee.multiplier}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>BATCH </label>
+        <input type="text" class="form-control" name="batch" placeholder="batch" value="{{employee.batch}}">
+    </div>
+    <div class="form-group">
+        <label>INCLUDE OR NOT </label>
+        <input type="number" class="form-control" name="include" placeholder="0 for exclude 1 for include" value="{{employee.include}}">
+    </div>
+   
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/admin/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+    
+   </form>
+  </article>
+  </div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+  <div  style="background-color: #fff; margin-top:25px;padding: 20px; ">
+<h3><a class="btn btn-secondary" href="/admin"><i class="fa fa-plus"></i> Create New</a> Platforms List</h3>
+<table class="table table-striped">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br>
+      <table class="table table-bordered table-striped">
+        <colgroup>
+          <col class="col-md-7">
+          <col class="col-md-9">
+            <col class="col-md-9">
+          <col class="col-md-9">
+            <col class="col-md-9">
+            <col class="col-md-2">
+              <col class="col-md-2">
+            <col class="col-md-2">
+              <col class="col-md-2">
+            <col class="col-md-3">
+        </colgroup>
+
+      
+    <thead>
+        <tr>
+            <th >PLATFORM</th>
+            <th  >URL_FRONT </th>
+             <th  >URL_BACK </th>
+            <th>DIVISION_ID </th>
+            <th>SLICE_FROM_START</th>
+            <th>SLICE_FROM_BACK</th>
+             <th>AGENT</th>
+            <th>WAITAGE</th>
+            <th>MULTIPLIER</th>
+            <th>BATCH</th>
+            <th> INCLUDE</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr> 
+            <td >{{this.platform}}</td>
+            <td >{{this.url_front}}</td>
+            <td >{{this.url_back}}</td>
+            <td>{{this.division_id}}</td>
+            <td>{{this.slice_from_start}}</td>
+            <td>{{this.slice_from_back}}</td>
+            <td>{{this.agent}}</td>
+            <td>{{this.waitage}}</td>
+            <td>{{this.multiplier}}</td>
+            <td>{{this.batch}}</td>
+            <td>{{this.include}}</td>
+            <td>
+                <a href="/admin/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/admin/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
